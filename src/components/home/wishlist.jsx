@@ -36,7 +36,7 @@ const Wishlist = () => {
           Your wishlist starts here
         </h5>
         <p className="text-base font-light">
-          Save destinations all in one place—even if you're not ready to book
+          Save destinations all in one place—even if you are not ready to book
         </p>
       </div>
       <Carousel
