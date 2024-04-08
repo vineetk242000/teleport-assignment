@@ -13,10 +13,10 @@ export default function Features() {
           {features.map((item) => (
             <div
               key={item.name}
-              className="py-2 flex item-center border-b-default border-b-fill  lg:border-fill lg:px-4 lg:py-4 lg:border-default lg:rounded-md lg:w-1/4 lg:mr-4 lg:flex-col"
+              className="py-2 flex item-center border-b-default border-b-fill  lg:border-fill lg:px-4 lg:py-4 lg:border-default lg:rounded-md md:w-1/4 lg:mr-4 lg:flex-col"
             >
               <div className="pr-2 items-center flex">
-                <img src={item.image} className="w-fit-content" />
+                <img src={item.image} className="w-24 h-14 md:w-14 md:h-14 " />
               </div>
               <div className="px-2">
                 <h5 className="font-medium  text-base lg:text-base lg:mt-2">

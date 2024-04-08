@@ -8,6 +8,7 @@ import Input from "../shared/Input";
 import { useState } from "react";
 import Link from "next/link";
 import { passengerTypes, seatCategories, tripTypes } from "@/data/static";
+import Calendar from "../shared/calendar";
 
 export default function Hero() {
   const [openTripTypeModal, setOpenTripTypeModal] = useState(false);
@@ -16,6 +17,10 @@ export default function Hero() {
   const [selectedTripType, setSelectedTripType] = useState("Return");
   const [selectedSeatType, setSelectedSeatType] = useState("Economy");
   const [passengersCount, setpassengersCount] = useState(1);
+  const [origin, setOrigin] = useState("");
+  const [destination, setDestination] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
 
   return (
     <div className="container w-80 pb-12 lg:w-full px-4 lg:px-8">
@@ -124,17 +129,47 @@ export default function Hero() {
       </div>
       <div className="lg:flex space-between lg:py-2">
         <div className="w-full lg:w-1/3 mr-2">
-          <Input placeholder="Origin" name="origin" value="" />
+          <Input
+            placeholder="Origin"
+            name="origin"
+            value={origin}
+            handleChange={(e) => setOrigin(e.target.value)}
+            inputAdornment="/flight.svg"
+          />
         </div>
         <div className="w-full lg:w-1/3 mr-2">
-          <Input placeholder="To" name="to" value="" />
+          <Input
+            placeholder="To?"
+            name="to"
+            value={destination}
+            handleChange={(e) => setDestination(e.target.value)}
+            inputAdornment="/flight.svg"
+          />
         </div>
-        <div className="w-full lg:w-1/3 mr-2">
-          <Input placeholder="Origin" name="origin" value="" />
+        <div className="w-full lg:w-1/3">
+          <div className="inline-flex w-1/2">
+            <Calendar
+              placeholder="Select your start date"
+              name="to"
+              value={startDate}
+              handleChange={(value) => setStartDate(value)}
+            />
+          </div>
+          <div className="inline-flex w-1/2">
+            <Calendar
+              placeholder="Select your end date"
+              name="end"
+              value={endDate}
+              handleChange={(value) => setEndDate(value)}
+            />
+          </div>
         </div>
-        <button className="bg-primary w-full py-4 px-2 rounded-lg leading-4 cursor-pointer text-sm flex items-center justify-center lg:w-16 lg:mr-2 lg:py-2">
-          <MagnifyingGlassIcon className=" w-6" />
-        </button>
+
+        <div className="flex justify-center item-center lg:py-2 mt-4">
+          <button className="bg-primary w-full py-3 px-2 rounded-lg leading-4 cursor-pointer text-sm flex items-center justify-center md:w-16 md:mr-2 md:py-2">
+            <MagnifyingGlassIcon className="w-6 text-white font-bold" />
+          </button>
+        </div>
       </div>
     </div>
   );

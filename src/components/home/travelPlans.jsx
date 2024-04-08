@@ -1,31 +1,5 @@
-import {
-  ArrowPathIcon,
-  CloudArrowUpIcon,
-  FingerPrintIcon,
-  HeartIcon,
-  LockClosedIcon
-} from "@heroicons/react/24/outline";
-
-const travelRoutes = [
-  {
-    image: "/city.jpeg",
-    place: "Bagdogra",
-    route: "CCU-GOI",
-    price: "14,000"
-  },
-  {
-    image: "/city.jpeg",
-    place: "Riyadh",
-    route: "CCU-RUH",
-    price: "16,000"
-  },
-  {
-    image: "/city.jpeg",
-    place: "Leh",
-    route: "CCU-LEH",
-    price: "18,000"
-  }
-];
+import { travelRoutes } from "@/data/static";
+import { HeartIcon } from "@heroicons/react/24/outline";
 
 export default function TravelPlans() {
   return (
@@ -51,7 +25,6 @@ export default function TravelPlans() {
                 src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319"
                 width="100%"
                 height="350"
-                frameborder="0"
                 className="w-full h-72"
               ></iframe>
             </div>

@@ -147,3 +147,24 @@ export const passengerTypes = [
     description: "under 2"
   }
 ];
+
+export const travelRoutes = [
+  {
+    image: "/city.jpeg",
+    place: "Bagdogra",
+    route: "CCU-GOI",
+    price: "14,000"
+  },
+  {
+    image: "/city.jpeg",
+    place: "Riyadh",
+    route: "CCU-RUH",
+    price: "16,000"
+  },
+  {
+    image: "/city.jpeg",
+    place: "Leh",
+    route: "CCU-LEH",
+    price: "18,000"
+  }
+];
