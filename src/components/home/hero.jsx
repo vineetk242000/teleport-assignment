@@ -6,7 +6,6 @@ import {
 } from "@heroicons/react/24/outline";
 import Input from "../shared/Input";
 import { useState } from "react";
-import Link from "next/link";
 import { passengerTypes, seatCategories, tripTypes } from "@/data/static";
 import Calendar from "../shared/calendar";
 
@@ -165,7 +164,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="flex justify-center item-center lg:py-2 mt-4">
+        <div className="flex justify-center item-center md:py-2 md:pl-2 mt-4 md:mt-2">
           <button className="bg-primary w-full py-3 px-2 rounded-lg leading-4 cursor-pointer text-sm flex items-center justify-center md:w-16 md:mr-2 md:py-2">
             <MagnifyingGlassIcon className="w-6 text-white font-bold" />
           </button>

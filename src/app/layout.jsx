@@ -7,6 +7,7 @@ import { useState } from "react";
 
 export default function RootLayout({ children }) {
   const [openSideNav, setOpenSideNav] = useState(false);
+
   return (
     <html lang="en">
       <body>

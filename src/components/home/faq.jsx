@@ -18,21 +18,7 @@ const Faq = () => {
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-light text-sm">
                   <span> {faq.question}</span>
-                  <span className="transition group-open:rotate-180">
-                    <svg
-                      fill="none"
-                      height="24"
-                      shapeRendering="geometricPrecision"
-                      stroke="currentColor"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="1.5"
-                      viewBox="0 0 24 24"
-                      width="24"
-                    >
-                      <path d="M6 9l6 6 6-6"></path>
-                    </svg>
-                  </span>
+                  <img src="/dropdown.svg" className="w-2.5 h-2.5 ms-3" />
                 </summary>
                 <p className="group-open:animate-fadeIn mt-3 text-sm font-light">
                   {faq.answer}
