@@ -57,7 +57,10 @@ export default function TravelPlans() {
             </div>
             <div className="px-2 w-1/2">
               {travelRoutes.map((item) => (
-                <div className="mb-2 mx-1 pb-4 border-b-default border-b-fill flex justify-between items-center">
+                <div
+                  key={item.place}
+                  className="mb-2 mx-1 pb-4 border-b-default border-b-fill flex justify-between items-center"
+                >
                   <div className="w-1/2 lg:flex items-center justify-around lg:w-3/4">
                     <div className="w-full lg:w-3/4">
                       <img src={item.image} className="w-24 h-24 rounded-lg" />

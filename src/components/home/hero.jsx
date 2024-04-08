@@ -1,11 +1,22 @@
 "use client";
-import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
+import {
+  MagnifyingGlassIcon,
+  MinusCircleIcon,
+  PlusCircleIcon
+} from "@heroicons/react/24/outline";
 import Input from "../shared/Input";
 import { useState } from "react";
+import Link from "next/link";
+import { passengerTypes, seatCategories, tripTypes } from "@/data/static";
 
 export default function Hero() {
   const [openTripTypeModal, setOpenTripTypeModal] = useState(false);
   const [openSeatTypeModal, setOpenSeatTypeModal] = useState(false);
+  const [openPassengersModal, setOpenPassengersModal] = useState(false);
+  const [selectedTripType, setSelectedTripType] = useState("Return");
+  const [selectedSeatType, setSelectedSeatType] = useState("Economy");
+  const [passengersCount, setpassengersCount] = useState(1);
+
   return (
     <div className="container w-80 pb-12 lg:w-full px-4 lg:px-8">
       <div className="px-8 text-center lg:text-start lg:px-0">
@@ -14,155 +25,104 @@ export default function Hero() {
         </h2>
       </div>
       <div className="flex justify-start mt-4">
-        <div className="flex px-2 lg:px-0">
+        <div className="px-1 lg:px-0">
           <button
             className="hover:bg-fill  focus:outline-none font-medium rounded-lg text-sm px-3 py-2.5 text-center inline-flex items-center"
             type="button"
             onClick={() => setOpenTripTypeModal(!openTripTypeModal)}
           >
-            Return <img src="/dropdown.svg" className="w-2.5 h-2.5 ms-3" />
+            <span className="text-sm font-semibold">{selectedTripType}</span>{" "}
+            <img src="/dropdown.svg" className="w-2.5 h-2.5 ms-3" />
           </button>
           <div
-            className={`z-10 ${openTripTypeModal ? "block" : "hidden"} bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}
+            className={`z-10 ${openTripTypeModal ? "block" : "hidden"} bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute`}
           >
-            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200">
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:"
+            <ul className="py-2 text-sm text-gray-900">
+              {tripTypes.map((item) => (
+                <li
+                  key={item.id}
+                  onClick={() => {
+                    setSelectedTripType(item.value);
+                    setOpenTripTypeModal(false);
+                  }}
+                  className="block px-4 py-2 hover:bg-fill cursor-pointer"
                 >
-                  One-way
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:"
-                >
-                  Return
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:"
-                >
-                  MultiCity
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:"
-                >
-                  Sign out
-                </a>
-              </li>
+                  {item.name}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
-        <div className="flex px-2">
+        <div className="px-1">
           <button
-            className="hover:bg-fill  focus:outline-none font-medium rounded-lg text-sm px-3 py-2.5 text-center inline-flex items-center"
+            className="hover:bg-fill  focus:outline-none font-medium rounded-lg text-sm px-3 py-2.5  text-center inline-flex items-center"
             type="button"
+            onClick={() => setOpenPassengersModal(!openPassengersModal)}
           >
-            1 Adult <img src="/dropdown.svg" className="w-2.5 h-2.5 ms-3" />
+            {passengersCount}{" "}
+            <span className="sm:w-[25px]md:w-[48px] ml-1"> Traveller</span>
+            <img src="/dropdown.svg" className="w-2.5 h-2.5 ms-3" />
           </button>
           <div
-            id="dropdownDelay"
-            className="z-10 hidden bg-white divide-y divide-gray-100 px-3 rounded-lg shadow w-44 dark:bg-gray-700"
+            className={`z-10 ${openPassengersModal ? "block" : "hidden"} bg-white divide-y divide-gray-100 px-8 py-8 rounded-lg shadow w-72  absolute`}
           >
-            <ul
-              className="py-2 text-sm text-gray-700 dark:text-gray-200"
-              aria-labelledby="dropdownDelayButton"
-            >
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:"
+            <ul className="py-2 text-sm text-gray-900">
+              {passengerTypes.map((item) => (
+                <li
+                  className="flex items-center justify-between px-4 py-2 hover:bg-fill "
+                  key={item.id}
                 >
-                  One-way
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:"
-                >
-                  Return
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:"
-                >
-                  MultiCity
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:"
-                >
-                  Sign out
-                </a>
-              </li>
+                  <p>
+                    {" "}
+                    {item.title}{" "}
+                    <span className="ml-1 font-light">{item.description}</span>
+                  </p>
+                  <span className="flex items-center">
+                    <PlusCircleIcon
+                      className="w-4 h-4 mr-1 cursor-pointer"
+                      onClick={() => setpassengersCount(passengersCount + 1)}
+                    />
+                    {item.id == 1 ? passengersCount : 0}{" "}
+                    <MinusCircleIcon
+                      className="w-4 h-4 ml-1 cursor-pointer"
+                      onClick={() => setpassengersCount(passengersCount - 1)}
+                    />
+                  </span>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
-        <div className="flex px-2">
+        <div className="px-1 ">
           <button
             className="hover:bg-fill  focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
             type="button"
+            onClick={() => setOpenSeatTypeModal(!openSeatTypeModal)}
           >
-            Economy <img src="/dropdown.svg" className="w-2.5 h-2.5 ms-3" />
+            {selectedSeatType}
+            <img src="/dropdown.svg" className="w-2.5 h-2.5 ms-3" />
           </button>
           <div
-            id="dropdownDelay"
-            className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+            className={`z-10 ${openSeatTypeModal ? "block" : "hidden"} bg-white divide-y divide-gray-100 rounded-lg shadow w-44 absolute`}
           >
-            <ul
-              className="py-2 text-sm text-gray-700 dark:text-gray-200"
-              aria-labelledby="dropdownDelayButton"
-            >
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:"
+            <ul className="py-2 text-sm text-gray-900">
+              {seatCategories.map((item) => (
+                <li
+                  className="block px-4 py-2 hover:bg-fill cursor-pointer "
+                  key={item.id}
+                  onClick={() => {
+                    setSelectedSeatType(item.value);
+                    setOpenSeatTypeModal(false);
+                  }}
                 >
-                  Premium Economy
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:"
-                >
-                  Business
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:"
-                >
-                  First
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:"
-                >
-                  Mixed
-                </a>
-              </li>
+                  {item.name}
+                </li>
+              ))}
             </ul>
           </div>
         </div>
       </div>
-      <div className="lg:flex space-between lg:py-4">
+      <div className="lg:flex space-between lg:py-2">
         <div className="w-full lg:w-1/3 mr-2">
           <Input placeholder="Origin" name="origin" value="" />
         </div>

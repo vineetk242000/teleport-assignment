@@ -11,7 +11,10 @@ export default function Features() {
         </div>
         <div className="lg:flex lg:justify-between">
           {features.map((item) => (
-            <div className="py-2 flex item-center border-b-default border-b-fill  lg:border-fill lg:px-4 lg:py-4 lg:border-default lg:rounded-md lg:w-1/4 lg:mr-4 lg:flex-col">
+            <div
+              key={item.name}
+              className="py-2 flex item-center border-b-default border-b-fill  lg:border-fill lg:px-4 lg:py-4 lg:border-default lg:rounded-md lg:w-1/4 lg:mr-4 lg:flex-col"
+            >
               <div className="pr-2 items-center flex">
                 <img src={item.image} className="w-fit-content" />
               </div>

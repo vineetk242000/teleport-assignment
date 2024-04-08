@@ -25,7 +25,8 @@ module.exports = {
       link: "#0b7b99",
       black: "#000000",
       "blue-100": "#D9E2E8",
-      "gray-900": "#212A30"
+      "gray-900": "#212A30",
+      "gray-800": "#000000"
     },
     container: {
       center: true

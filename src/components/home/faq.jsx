@@ -10,7 +10,10 @@ const Faq = () => {
       </div>
       <div className="flex justify-between items-center flex-wrap w-full">
         {faqs.map((faq) => (
-          <div className="mt-4 grid max-w-lg divide-y divide-neutral-200 border-b-default border-b-fill w-full lg:w-1/2">
+          <div
+            key={faq.question}
+            className="mt-4 grid max-w-lg divide-y divide-neutral-200 border-b-default border-b-fill w-full lg:w-1/2"
+          >
             <div className="py-5">
               <details className="group">
                 <summary className="flex cursor-pointer list-none items-center justify-between font-light text-sm">

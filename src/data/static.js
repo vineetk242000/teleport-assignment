@@ -73,3 +73,77 @@ export const destinations = [
     image: "/london.jpg"
   }
 ];
+
+export const tripTypes = [
+  {
+    value: "Return",
+    name: "Return",
+    id: 1
+  },
+  {
+    value: "One-way",
+    name: "One-way",
+    id: 2
+  },
+  {
+    value: "Multi-city",
+    name: "Multi-city",
+    id: 3
+  }
+];
+
+export const seatCategories = [
+  {
+    value: "Economy",
+    name: "Economy",
+    id: 1
+  },
+  {
+    value: "First",
+    name: "First",
+    id: 2
+  },
+  {
+    value: "Business",
+    name: "Business",
+    id: 3
+  },
+  {
+    value: "Mixed",
+    name: "Mixed",
+    id: 4
+  },
+  {
+    value: "Premium Economy",
+    name: "Premium Economy",
+    id: 5
+  }
+];
+
+export const passengerTypes = [
+  {
+    id: "1",
+    title: "Adults",
+    description: "18+"
+  },
+  {
+    id: "2",
+    title: "Students",
+    description: "Over 18"
+  },
+  {
+    id: "3",
+    title: "Children",
+    description: "2-11"
+  },
+  {
+    id: "4",
+    title: "Toddlers",
+    description: "0-2"
+  },
+  {
+    id: "5",
+    title: "Infants on lap",
+    description: "under 2"
+  }
+];
