@@ -35,7 +35,7 @@ export default function Newsletter() {
             <button
               className={`${email.length > 3 ? "bg-primary" : "bg-fill"} w-full py-2 my-2 rounded-lg lg:w-1/6 md:ml-4`}
             >
-              <p className="font-bold text-white">Let's do this</p>
+              <p className="font-bold text-white">Let&apos;s do this</p>
             </button>
           </div>
         </div>
