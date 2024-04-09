@@ -10,10 +10,10 @@ const Sidebar = ({ open, setOpen }) => {
       >
         <div className="overflow-y-auto overflow-x-hidden flex-grow">
           <ul className="flex flex-col py-4 space-y-1">
-            <li className="border-b-default border-b-fill px-2 py-2">
+            <li className="border-b-default border-b-fill ml-2 py-2 md:ml-0 lg:ml-2">
               <Link
                 href="/"
-                className="relative flex flex-row items-center h-11  focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6  rounded-md"
+                className="relative flex items-center  h-11 focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 md:pr-2 lg:pr-4 rounded-md"
               >
                 <img
                   className="inline-flex justify-center items-center w-5 h-5 ml-2"
@@ -23,10 +23,10 @@ const Sidebar = ({ open, setOpen }) => {
               </Link>
             </li>
             <div className="border-b-default border-b-fill">
-              <li className=" ml-2 py-1">
+              <li className="ml-2 py-1 md:ml-0 lg:ml-2">
                 <Link
                   href="/"
-                  className="relative flex flex-row items-center h-11 bg-fill focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 rounded-md"
+                  className="relative flex items-center  h-11 bg-fill focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 md:pr-2 lg:pr-4 rounded-md"
                 >
                   <img
                     className="inline-flex justify-center items-center w-5 h-5 ml-2"
@@ -35,10 +35,10 @@ const Sidebar = ({ open, setOpen }) => {
                   <span className="ml-4 text-sm tracking-wide truncate">Flights</span>
                 </Link>
               </li>
-              <li className=" ml-2 py-1">
+              <li className=" ml-2 py-1 md:ml-0 lg:ml-2">
                 <Link
                   href="/"
-                  className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 rounded-md"
+                  className="relative flex items-center  h-11  focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 md:pr-2 lg:pr-4 rounded-md"
                 >
                   <img
                     className="inline-flex justify-center items-center w-5 h-5 ml-2"
@@ -47,10 +47,10 @@ const Sidebar = ({ open, setOpen }) => {
                   <span className="ml-4 text-sm tracking-wide truncate">Stays</span>
                 </Link>
               </li>
-              <li className=" ml-2 py-1">
+              <li className=" ml-2 py-1 md:ml-0 lg:ml-2">
                 <Link
                   href="/"
-                  className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 rounded-md"
+                  className="relative flex items-center  h-11  focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 md:pr-2 lg:pr-4 rounded-md"
                 >
                   <img
                     className="inline-flex justify-center items-center w-5 h-5 ml-2"
@@ -59,10 +59,10 @@ const Sidebar = ({ open, setOpen }) => {
                   <span className="ml-4 text-sm tracking-wide truncate">Car Rental</span>
                 </Link>
               </li>
-              <li className="ml-2 py-1">
+              <li className="ml-2 py-1 md:ml-0 lg:ml-2">
                 <Link
                   href="/"
-                  className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 rounded-md"
+                  className="relative flex items-center  h-11  focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 md:pr-2 lg:pr-4 rounded-md"
                 >
                   <img
                     className="inline-flex justify-center items-center w-5 h-5 ml-2"
@@ -75,10 +75,10 @@ const Sidebar = ({ open, setOpen }) => {
               </li>
             </div>
             <div className="border-b-default border-b-fill">
-              <li className=" ml-2 py-1">
+              <li className=" ml-2 py-1 md:ml-0 lg:ml-2">
                 <Link
                   href="/"
-                  className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 rounded-md"
+                  className="relative flex items-center  h-11  focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 md:pr-2 lg:pr-4 rounded-md"
                 >
                   <img
                     className="inline-flex justify-center items-center w-5 h-5 ml-2"
@@ -87,10 +87,10 @@ const Sidebar = ({ open, setOpen }) => {
                   <span className="ml-4 text-sm tracking-wide truncate">Explore</span>
                 </Link>
               </li>
-              <li className=" ml-2 py-1">
+              <li className=" ml-2 py-1 md:ml-0 lg:ml-2">
                 <Link
                   href="/"
-                  className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 rounded-md"
+                  className="relative flex items-center  h-11  focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 md:pr-2 lg:pr-4 rounded-md"
                 >
                   <img
                     className="inline-flex justify-center items-center w-5 h-5 ml-2"
@@ -99,10 +99,10 @@ const Sidebar = ({ open, setOpen }) => {
                   <span className="ml-4 text-sm tracking-wide truncate">Direct</span>
                 </Link>
               </li>
-              <li className=" ml-2 py-1">
+              <li className=" ml-2 py-1 md:ml-0 lg:ml-2">
                 <Link
                   href="/"
-                  className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 rounded-md"
+                  className="relative flex items-center  h-11  focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 md:pr-2 lg:pr-4 rounded-md"
                 >
                   <img
                     className="inline-flex justify-center items-center w-5 h-5 ml-2"
@@ -114,10 +114,10 @@ const Sidebar = ({ open, setOpen }) => {
                 </Link>
               </li>
             </div>
-            <li className="border-b-default border-b-fill ml-2 py-2">
+            <li className="border-b-default border-b-fill ml-2 py-2 md:ml-0 lg:ml-2">
               <Link
                 href="/"
-                className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 rounded-md"
+                className="relative flex items-center  h-11  focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 md:pr-2 lg:pr-4 rounded-md"
               >
                 <img
                   className="inline-flex justify-center items-center w-5 h-5 ml-2"
@@ -126,10 +126,10 @@ const Sidebar = ({ open, setOpen }) => {
                 <span className="ml-4 text-sm tracking-wide truncate">Feedback</span>
               </Link>
             </li>
-            <li className="border-b-default border-b-fill ml-2 py-2">
+            <li className="border-b-default border-b-fill ml-2 py-2 md:ml-0 lg:ml-2">
               <Link
                 href="/"
-                className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 rounded-md"
+                className="relative flex items-center  h-11  focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 md:pr-2 lg:pr-4 rounded-md"
               >
                 <img
                   className="inline-flex justify-center items-center w-5 h-5 ml-2"
@@ -139,10 +139,10 @@ const Sidebar = ({ open, setOpen }) => {
               </Link>
             </li>
 
-            <li className="border-b-default border-b-fill ml-2 py-2">
+            <li className="border-b-default border-b-fill ml-2 py-2 md:ml-0 lg:ml-2">
               <Link
                 href="/"
-                className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 rounded-md"
+                className="relative flex items-center  h-11  focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 md:pr-2 lg:pr-4 rounded-md"
               >
                 <img
                   className="inline-flex justify-center items-center w-5 h-5 ml-2"
@@ -153,10 +153,10 @@ const Sidebar = ({ open, setOpen }) => {
                 </span>
               </Link>
             </li>
-            <li className="border-b-default border-b-fill ml-2 py-2">
+            <li className="border-b-default border-b-fill ml-2 py-2 md:ml-0 lg:ml-2 ">
               <Link
                 href="/"
-                className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 rounded-md"
+                className="relative flex items-center  h-11  focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 md:pr-2 lg:pr-4 rounded-md"
               >
                 <img
                   className="inline-flex justify-center items-center w-5 h-5 ml-2"
@@ -165,10 +165,10 @@ const Sidebar = ({ open, setOpen }) => {
                 <span className="ml-4 text-sm tracking-wide truncate">English</span>
               </Link>
             </li>
-            <li className="border-b-default border-b-fill ml-2 py-2">
+            <li className="border-b-default border-b-fill ml-2 py-2 md:ml-0 lg:ml-2">
               <Link
                 href="/"
-                className="relative flex flex-row items-center h-11 focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 rounded-md"
+                className="relative flex items-center  h-11 focus:outline-none hover:bg-fill text-gray-600 hover:text-gray-800 border-l-4 border-transparent  pr-6 md:pr-2 lg:pr-4 rounded-md"
               >
                 <span className="inline-flex justify-center items-center w-5 h-5 ml-2">
                   &#8377;
