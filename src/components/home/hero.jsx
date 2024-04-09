@@ -146,17 +146,17 @@ export default function Hero() {
           />
         </div>
         <div className="w-full lg:w-1/3">
-          <div className="inline-flex w-1/2">
+          <div className="block md:inline-flex  w-full  md:w-1/2">
             <Calendar
-              placeholder="Select your start date"
+              placeholder="Start date"
               name="to"
               value={startDate}
               handleChange={(value) => setStartDate(value)}
             />
           </div>
-          <div className="inline-flex w-1/2">
+          <div className=" block md:inline-flex  md:w-1/2">
             <Calendar
-              placeholder="Select your end date"
+              placeholder="End date"
               name="end"
               value={endDate}
               handleChange={(value) => setEndDate(value)}
